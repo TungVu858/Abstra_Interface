@@ -1,6 +1,8 @@
 package comparator;
 
-public class Rectangle {
+import resizeable.Resizeable;
+
+public class Rectangle implements Resizeable {
     private double dai;
     private double rong;
     private String color= "red";
@@ -53,5 +55,10 @@ public class Rectangle {
                 ", rong=" + rong +
                 ", color='" + color + '\'' +
                 '}' + " Area " + setArea();
+    }
+    @Override
+    public void resize(double percent) {
+        this.dai *= (percent / 200);
+        this.rong *=(percent/200);
     }
 }

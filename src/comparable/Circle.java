@@ -1,6 +1,8 @@
 package comparable;
 
-public class Circle {
+import resizeable.Resizeable;
+
+public class Circle implements Resizeable {
     private double radius = 1;
     private String color = "red";
     private boolean filled = false;
@@ -41,6 +43,9 @@ public class Circle {
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
+    public double setArea(){
+        return this.radius*this.radius*Math.PI;
+    }
 
     @Override
     public String toString() {
@@ -48,7 +53,10 @@ public class Circle {
                 "radius=" + radius +
                 ", color='" + color + '\'' +
                 ", filled=" + filled +
-                '}';
+                '}' + " Area " + setArea();
     }
-
+    @Override
+    public void resize(double percent) {
+        this.radius *= (percent / 200);
+    }
 }

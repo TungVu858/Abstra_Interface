@@ -1,13 +1,17 @@
 package comparator;
 
-public class Square extends Rectangle {
+import resizeable.Resizeable;
+
+public class Square extends Rectangle implements Resizeable {
+    private double canh;
     public Square() {
     }
 
     public Square(double canh) {
-        super(canh, canh);
+        this.canh = canh;
     }
-    public Square (double canh,String color){
+
+    public Square (double canh, String color){
         super(canh,canh,color);
     }
     public double getCanh() {
@@ -31,5 +35,9 @@ public class Square extends Rectangle {
     @Override
     public String toString() {
         return "Square {dai=" +getCanh()+ " , color= "+ getColor()+" } " +"Area " + setArea();
+    }
+    @Override
+    public void resize(double percent) {
+        this.canh  *= (percent / 200);
     }
 }
