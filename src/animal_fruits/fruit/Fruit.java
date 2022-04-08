@@ -1,6 +1,6 @@
-package fruit;
+package animal_fruits.fruit;
 
-import edible.Edible;
+import animal_fruits.edible.Edible;
 
 public abstract class Fruit implements Edible {
     public static void main(String[] args) {

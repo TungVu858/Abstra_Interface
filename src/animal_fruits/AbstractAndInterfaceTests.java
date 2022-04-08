@@ -1,7 +1,9 @@
-import animal.Animal;
-import animal.Chicken;
-import animal.Tiger;
-import edible.Edible;
+package animal_fruits;
+
+import animal_fruits.animal.Animal;
+import animal_fruits.animal.Chicken;
+import animal_fruits.animal.Tiger;
+import animal_fruits.edible.Edible;
 
 public class AbstractAndInterfaceTests {
     public static void main(String[] args) {

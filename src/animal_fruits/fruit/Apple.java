@@ -1,4 +1,4 @@
-package fruit;
+package animal_fruits.fruit;
 
 public class Apple extends Fruit{
     @Override
