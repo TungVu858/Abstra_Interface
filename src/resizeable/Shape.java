@@ -1,6 +1,8 @@
 package resizeable;
 
-public class Shape implements Resizeable {
+import colorable.Colorable;
+
+public class Shape implements Resizeable, Colorable {
     private String color = "green";
     private boolean filled = true;
 
@@ -38,6 +40,9 @@ public class Shape implements Resizeable {
     }
     @Override
     public void resize(double percent) {
+    }
 
+    @Override
+    public void howToColor() {
     }
 }

@@ -1,6 +1,6 @@
 package resizeable;
 
-public class Square extends Shape{
+public class Square extends Shape {
     private double side;
 
     public Square() {
@@ -11,7 +11,7 @@ public class Square extends Shape{
     }
 
     public Square(double side, String color, boolean filled) {
-        super(color,filled);
+        super(color, filled);
         this.side = side;
     }
 
@@ -30,7 +30,7 @@ public class Square extends Shape{
                 + ", con của "
                 + super.toString()
                 + ", Area=" +
-                + getArea();
+                +getArea();
     }
 
     double getArea() {
@@ -40,5 +40,10 @@ public class Square extends Shape{
     @Override
     public void resize(double percent) {
         this.side *= (percent / 200);
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides");
     }
 }
